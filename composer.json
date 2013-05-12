@@ -1,12 +1,12 @@
 {
-    "name": "adfab/adfab-faq",
+    "name": "adfab/faq",
     "description": "A simple FAQ module for AdFab ZF2 dev",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
         "zf2",
         "playground",
-        "adfab-faq",
+        "adfab",
         "FAQ"
     ],
     "homepage": "https://github.com/gregorybesson/AdfabFaq",
@@ -29,8 +29,7 @@
 		"doctrine/doctrine-orm-module" : "*",
 		"zf-commons/zfc-base" : "0.*",
 		"zf-commons/zfc-admin" : "0.*",
-		"adfab/adfab-core" : "dev-master"
-		
+		"adfab/core" : "dev-master"
     },
     "require-dev": {
         "doctrine/doctrine-orm-module": "0.*"
