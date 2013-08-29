@@ -36,7 +36,7 @@ return array(
     'router' => array(
         'routes' => array(
         	'frontend' => array(
-       			'child_routes' => array(
+       			'child_routes' => array( 
 		            'faq' => array(
 		                'type' => 'Zend\Mvc\Router\Http\Segment',
 		                'options' => array(
