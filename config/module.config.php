@@ -35,16 +35,21 @@ return array(
 
     'router' => array(
         'routes' => array(
-            'faq' => array(
-                'type' => 'Zend\Mvc\Router\Http\Segment',
-                'options' => array(
-                    'route'    => '/faq',
-                    'defaults' => array(
-                        'controller' => 'adfabfaq',
-                        'action'     => 'index',
-                    ),
-                ),
-            ),
+        	'frontend' => array(
+       			'child_routes' => array(
+		            'faq' => array(
+		                'type' => 'Zend\Mvc\Router\Http\Segment',
+		                'options' => array(
+		                    'route'    => 'faq',
+		                    'defaults' => array(
+		                        'controller' => 'adfabfaq',
+		                        'action'     => 'index',
+		                    ),
+		                ),
+		            ),
+       			),
+        	),
+        		
             'zfcadmin' => array(
                 'child_routes' => array(
                     'adfabfaq_admin' => array(
