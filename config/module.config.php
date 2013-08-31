@@ -133,7 +133,7 @@ return array(
             ),
         	'controllers' => array(
        			'adfabfaq_admin' => array(
-        			'default_layout' => 'application/layout/admin/admin',
+        			'default_layout' => 'layout/admin',
        			),
        		),
         ),
