@@ -1,7 +1,7 @@
 <?php //$this->plugin('translate')->setTranslatorTextDomain('adfabfaq'); ?>
 
 <ul class="liste-buttons">
-	<li class="btn-admin"><a href="<?php echo $this->url('zfcadmin/adfabfaq_admin/create');?>"><?php echo $this->translate('Ajouter une FAQ'); ?></a></li>
+	<li class="btn-admin"><a href="<?php echo $this->url('admin/adfabfaq_admin/create');?>"><?php echo $this->translate('Ajouter une FAQ'); ?></a></li>
 </ul>
 
 <h1 class="f-left"><?php echo $this->translate('Liste des FAQ'); ?></h1>
@@ -15,10 +15,10 @@
 	    </tr>
 	    <tbody id="sort-table">
 	    <?php foreach ($this->faqs as $faq): ?>
-	        <?php $editLink = $this->url('zfcadmin/adfabfaq_admin/edit', array('faqId' => $faq->getId()));?>
-	        <?php $deleteLink = $this->url('zfcadmin/adfabfaq_admin/remove', array('faqId' => $faq->getId()));?>
+	        <?php $editLink = $this->url('admin/adfabfaq_admin/edit', array('faqId' => $faq->getId()));?>
+	        <?php $deleteLink = $this->url('admin/adfabfaq_admin/remove', array('faqId' => $faq->getId()));?>
 	        <tr class="sortable" id="<?php echo $faq->getId() ?>" 
-	        	data-url="<?php echo $this->url('zfcadmin/adfabfaq_admin/edit', array('faqId' => $faq->getId()))?>"
+	        	data-url="<?php echo $this->url('admin/adfabfaq_admin/edit', array('faqId' => $faq->getId()))?>"
 	        	data-active="<?php echo $faq->getIsActive() ?>">
 	            
 	            <td><?php //echo $faq->getId() ?></td>
@@ -36,7 +36,7 @@
 </table>
 
 <ul class="liste-buttons bottom">
-	<li class="btn-admin bottom"><a href="<?php echo $this->url('zfcadmin/adfabfaq_admin/create');?>"><?php echo $this->translate('Ajouter une FAQ'); ?></a></li>
+	<li class="btn-admin bottom"><a href="<?php echo $this->url('admin/adfabfaq_admin/create');?>"><?php echo $this->translate('Ajouter une FAQ'); ?></a></li>
 </ul>
 
 <?php //echo $this->paginationControl($this->faqs, 'Sliding', 'adfab-faq/admin/pagination_faqlist.phtml'); ?>

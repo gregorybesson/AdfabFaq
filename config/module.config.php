@@ -50,7 +50,7 @@ return array(
        			),
         	),
         		
-            'zfcadmin' => array(
+            'admin' => array(
                 'child_routes' => array(
                     'adfabfaq_admin' => array(
                         'type' => 'Literal',
@@ -131,6 +131,11 @@ return array(
             'children_views' => array(
                 'col_left'  => 'adfab-user/layout/col-user.phtml',
             ),
+        	'controllers' => array(
+       			'adfabfaq_admin' => array(
+        			'default_layout' => 'application/layout/admin/admin',
+       			),
+       		),
         ),
     ),
 
@@ -145,19 +150,19 @@ return array(
             'adfabfaqadmin' => array(
                 'order' => 90,
                 'label' => 'FAQ',
-                'route' => 'zfcadmin/adfabfaq_admin/list',
+                'route' => 'admin/adfabfaq_admin/list',
                 'resource' => 'faq',
                 'privilege' => 'list',
                 'pages' => array(
                     'list' => array(
                             'label' => 'Liste des FAQ',
-                            'route' => 'zfcadmin/adfabfaq_admin/list',
+                            'route' => 'admin/adfabfaq_admin/list',
                             'resource' => 'faq',
                             'privilege' => 'list',
                     ),
                     'create' => array(
                         'label' => 'Nouvelle FAQ',
-                        'route' => 'zfcadmin/adfabfaq_admin/create',
+                        'route' => 'admin/adfabfaq_admin/create',
                         'resource' => 'faq',
                         'privilege' => 'add',
                     ),

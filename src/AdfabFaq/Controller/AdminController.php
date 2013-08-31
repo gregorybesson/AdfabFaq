@@ -39,7 +39,7 @@ class AdminController extends AbstractActionController
     {
         $form = $this->getServiceLocator()->get('adfabfaq_faq_form');
         $form->get('submit')->setLabel('Créer');
-        $form->setAttribute('action', $this->url()->fromRoute('zfcadmin/adfabfaq_admin/create', array('faqId' => 0)));
+        $form->setAttribute('action', $this->url()->fromRoute('admin/adfabfaq_admin/create', array('faqId' => 0)));
         $form->setAttribute('method', 'post');
 
         $faq = new \AdfabFaq\Entity\Faq();
@@ -53,7 +53,7 @@ class AdminController extends AbstractActionController
             if ($faq) {
                 $this->flashMessenger()->setNamespace('adfabfaq')->addMessage('La FAQ a été créée');
 
-                return $this->redirect()->toRoute('zfcadmin/adfabfaq_admin/list');
+                return $this->redirect()->toRoute('admin/adfabfaq_admin/list');
             }
         }
 
@@ -68,7 +68,7 @@ class AdminController extends AbstractActionController
         $faqId = $this->getEvent()->getRouteMatch()->getParam('faqId');
         $faq = $this->getFaqMapper()->findById($faqId);
         $form = $this->getServiceLocator()->get('adfabfaq_faq_form');
-        $form->setAttribute('action', $this->url()->fromRoute('zfcadmin/adfabfaq_admin/edit', array('faqId' => $faqId)));
+        $form->setAttribute('action', $this->url()->fromRoute('admin/adfabfaq_admin/edit', array('faqId' => $faqId)));
         $form->setAttribute('method', 'post');
 
         $form->bind($faq);
@@ -80,7 +80,7 @@ class AdminController extends AbstractActionController
             if ($faq) {
                 $this->flashMessenger()->setNamespace('adfabfaq')->addMessage('La FAQ a été créée');
 
-                return $this->redirect()->toRoute('zfcadmin/adfabfaq_admin/list');
+                return $this->redirect()->toRoute('admin/adfabfaq_admin/list');
             }
         }
 
@@ -99,7 +99,7 @@ class AdminController extends AbstractActionController
             $this->flashMessenger()->setNamespace('adfabfaq')->addMessage('FAQ supprimée');
         }
 
-        return $this->redirect()->toRoute('zfcadmin/adfabfaq_admin/list');
+        return $this->redirect()->toRoute('admin/adfabfaq_admin/list');
     }
 
     public function setOptions(ModuleOptions $options)
